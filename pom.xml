@@ -8,6 +8,10 @@
     <artifactId>bootable-microservices-with-netflix</artifactId>
     <version>1.0</version>
 
+    <modules>
+        <module>eureka-server</module>
+    </modules>
+
     <developers>
         <developer>
             <id>mahmutbas</id>
