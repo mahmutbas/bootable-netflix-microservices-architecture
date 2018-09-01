@@ -1,4 +1,4 @@
-package com.mahmutbas.microservices.eureka.client.clientorderservice.model;
+package com.mahmutbas.microservices.client.clientcustomerservice.model;
 
 import lombok.Data;
 
