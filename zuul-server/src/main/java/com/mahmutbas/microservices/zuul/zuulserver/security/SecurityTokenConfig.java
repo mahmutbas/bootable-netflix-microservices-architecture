@@ -1,5 +1,6 @@
 package com.mahmutbas.microservices.zuul.zuulserver.security;
 
+import com.mahmutbas.microservices.config.configservice.security.JwtConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
@@ -18,7 +19,8 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter
     private JwtConfig jwtConfig;
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
+    protected void configure(HttpSecurity http) throws Exception
+    {
         http
                 .csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -39,7 +41,8 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter
     }
 
     @Bean
-    public JwtConfig jwtConfig() {
+    public JwtConfig jwtConfig()
+    {
         return new JwtConfig();
     }
 }

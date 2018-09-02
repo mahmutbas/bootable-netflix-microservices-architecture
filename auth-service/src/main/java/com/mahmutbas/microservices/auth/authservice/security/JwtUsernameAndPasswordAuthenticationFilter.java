@@ -1,6 +1,7 @@
 package com.mahmutbas.microservices.auth.authservice.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mahmutbas.microservices.config.configservice.security.JwtConfig;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.Data;

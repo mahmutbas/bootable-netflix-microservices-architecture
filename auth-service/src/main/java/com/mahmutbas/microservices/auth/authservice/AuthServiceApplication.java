@@ -11,4 +11,15 @@ public class AuthServiceApplication
     {
         SpringApplication.run(AuthServiceApplication.class, args);
     }
+
+    //to test
+    //http://localhost:8862/auth
+    //Content-Type in the headers is assigned to application/json
+    //body
+    //{
+    //	"username":"admin",
+    //	"password":"passwd"
+    //}
+    // then post it. response header will include token
+    // tooken with Auth with Bearer token
 }

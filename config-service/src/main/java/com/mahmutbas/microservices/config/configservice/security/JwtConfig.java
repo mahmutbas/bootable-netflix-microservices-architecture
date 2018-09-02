@@ -1,4 +1,4 @@
-package com.mahmutbas.microservices.auth.authservice.security;
+package com.mahmutbas.microservices.config.configservice.security;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;

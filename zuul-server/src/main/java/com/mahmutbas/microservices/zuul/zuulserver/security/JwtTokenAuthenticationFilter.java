@@ -1,5 +1,6 @@
 package com.mahmutbas.microservices.zuul.zuulserver.security;
 
+import com.mahmutbas.microservices.config.configservice.security.JwtConfig;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
