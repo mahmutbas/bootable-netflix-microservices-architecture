@@ -2,6 +2,7 @@ package com.mahmutbas.microservices.client.clientcustomerservice.controller;
 
 import com.mahmutbas.microservices.client.clientcustomerservice.model.Customer;
 import com.mahmutbas.microservices.client.clientcustomerservice.model.CustomerOrder;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,6 +31,7 @@ public class CustomerController
         return "Customer Service running on port: " + environments.getProperty("local.server.port");
     }
 
+    @HystrixCommand(fallbackMethod = "fallback")
     @RequestMapping("/{id}")
     public Customer getCustomer(@PathVariable final Long id)
     {
@@ -49,5 +51,10 @@ public class CustomerController
     @RequestMapping("/admin")
     public String rootAdmin() {
         return "This is the admin area of Gallery service running at port: " + environments.getProperty("local.server.port");
+    }
+
+    // a fallback method to be called if failure happened
+    public Customer fallback(Long customerId, Throwable hystrixCommand) {
+        return Customer.defaultCustomer(customerId);
     }
 }
