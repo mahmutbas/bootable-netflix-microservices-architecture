@@ -11,8 +11,9 @@
     <modules>
         <module>eureka-server</module>
         <module>client-customer-service</module>
-       <module>client-order-service</module>
-       <module>zuul-server</module>
+        <module>client-order-service</module>
+        <module>zuul-server</module>
+        <module>auth-service</module>
     </modules>
 
     <developers>
